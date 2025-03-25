@@ -488,15 +488,21 @@ button {
 
 .services_section {
     width: 100%;
-    float: left;
-    padding-top: 0px;
+    padding: 90px 0; /* Üst ve alt boşluk */
+    text-align: center; /* Başlık ve içerik ortalanacak */
+    display: flex;
+    justify-content: center; /* İçeriği yatayda ortalar */
+    align-items: center; /* İçeriği dikeyde ortalar */
+    flex-direction: column; /* Başlık ve içerik alt alta sıralansın */
 }
+
 .services_taital {
     width: 100%;
     float: left;
     font-size: 40px;
     color: #2f85cc;
     font-weight: bold;
+    margin-bottom: 40px; /* Başlığın altına boşluk ekler */
 }
 
 
@@ -510,10 +516,14 @@ button {
 }
 
 .services_section_2 {
-    width: 100%;
-    float: left;
-    padding-top: 80px;
+    width: 80%;
+    display: flex;
+    justify-content: center; /* İçeriği ortala */
+    flex-wrap: wrap; /* Satıra sığmayan öğeleri alta al */
+    margin: 0 auto; /* Ortalamak için */
+    padding: 0;
 }
+
 
 .box_main {
     width: 100%;
@@ -610,8 +620,8 @@ button {
 
 .portfolio_section_2 {
     width: 100%;
-    float: left;
-    padding-top: 30px;
+     padding: 0;
+    margin: 0;
 }
 
 .image {
@@ -622,10 +632,13 @@ button {
 
 /* İçerik genişliği tamamen ekranı kaplasın */
 .container {
-  width: 100%;
-  max-width: 100%;
-  padding: 0;
-  margin: 0;
+  max-width: 100% !important; /* İçeriğin maksimum genişliğini tam ekran yap */
+  width: 100% !important; /* Genişliği tamamen kaplasın */
+  margin: 0; /* Ortalamayı kaldır */
+  padding: 10px; /* İç boşlukları biraz artır */
+  border-radius: 0; /* Köşe yuvarlatmalarını kaldır, full width görünüm için */
+  box-shadow: none; /* Kenar gölgelerini kaldırarak full width bir his ver */
+
 }
 
 
@@ -665,9 +678,9 @@ button {
 }
 
 .container_main {
+      width: 100%;
     position: relative;
-    display: block;
-    float: right; /* Sağa kaydırır */
+    overflow: hidden; /* Taşan içerikleri gizle */
 }
 
 
@@ -751,14 +764,20 @@ button {
 }
 
 .row {
-  max-width: 100% !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-  padding: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Eşit dağılım yap */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
 }
+
+/* Tüm içerik responsive olsun */
 * {
-  max-width: 100% !important;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 /* Sol Bölüm (İkon ve Başlık) */
@@ -769,7 +788,9 @@ button {
 }
 
 .col-md-12 {
-  width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important; /* Yan boşlukları sıfırla */
+    margin: 0 !important;
 }
 .faq-left img {
   width: 50px;
@@ -1342,7 +1363,6 @@ body {
 .card-body {
   background-color: #f8f9fa;
 }
-
 .btn-link {
   color: #000000;
   text-decoration: none;
@@ -1357,16 +1377,54 @@ body {
 
 .container-wrapper {
   background-color: #f9f9f9; /* Açık gri arka plan */
-  width: 100vw; /* Tam ekran genişliği */
+  width: 100%; /* Tüm genişliği kaplamasını önle */
   padding: 50px 0; /* Üst ve alt boşluk */
+  display: flex;
+  justify-content: center; /* Ortalamak için */
 }
 
 .container.mt-5 {
-  max-width: 1200px; /* İçeriğin maksimum genişliği */
+  max-width: 1100px; /* İçeriğin maksimum genişliğini biraz küçülttüm */
+  width: 90%; /* Responsive olması için genişliği %90 yaptım */
   margin: 0 auto; /* Ortalamak için */
   padding: 30px; /* İç boşluk */
   border-radius: 10px; /* Köşeleri yuvarlatma */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
   background-color: white; /* İç kutunun arka planı */
+}
+
+.col-lg-6 {
+  flex: 1; /* İki kolon da eşit genişlik alsın */
+  max-width: 50%; /* Her biri ekranın yarısını kaplasın */
+  padding: 20px; /* İçerikler arasında biraz boşluk bırak */
+}
+
+/* Küçük ekranlarda tek sütun yap */
+@media (max-width: 992px) {
+  .col-lg-6 {
+    max-width: 100%; /* Küçük ekranlarda tam genişlik alsın */
+  }
+}
+/* Responsive ekranlar için genişliği ayarlayalım */
+@media (max-width: 1200px) {
+  .container {
+    width: 85%;
+    max-width: 900px ;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .container {
+    width: 95%;
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 600px;
+  }
 }
 
