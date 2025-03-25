@@ -1,0 +1,231 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Hakkımızda </title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <!-- fevicon -->
+      <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+      <!-- font awesome css -->
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+<style>
+      /* Sayfa genişliğini tamamen kaplaması için */
+.portfolio_section_2 .row {
+    margin: 0;  /* Herhangi bir margin boşluğunu kaldırıyoruz */
+    padding: 0;  /* Herhangi bir padding boşluğunu kaldırıyoruz */
+}
+
+.container_main {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Görselin ekranı tamamen kaplamasını sağlıyoruz */
+}
+
+.container_main img {
+    width: 100%;  /* Görselin genişliğini %100 yapıyoruz */
+    height: 60%;  /* Görselin yüksekliğini %60 yapıyoruz */
+    object-fit: cover;  /* Görselin oranını bozmadan alanı kaplamasını sağlıyoruz */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(45, 45, 45, 0.5);
+    margin: 0 auto;
+}
+.text {
+    text-align: center;
+    padding: 20px;
+}
+
+.buy_bt a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #f8ca29;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.buy_bt a:hover {
+    background-color: #e0b21f;
+}
+</style>
+</head>
+   <body>
+   <!-- header section start -->
+   {% block content %}
+          <div class="portfolio_section">
+    <div class="portfolio_section_2">
+        <div class="row">
+            <div class="col-md-12">  <!-- Genişliği tam sayfa yapmak için col-md-8 yerine col-md-12 kullanıyoruz -->
+                <div class="container_main">
+                    <img src="{% static 'images/hizmet1.png' %}" alt="" class="image">
+                    <div class="overlay">
+                        <div class="text">
+                            <div class="description">
+                                <p>Hakkımızda</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+   <!-- header section end -->
+<main>
+
+
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Yenilikçi Teknolojilerle Geleceği Şekillendiriyoruz<span class="text-body-secondary"></span></h2>
+        <p class="lead">Şirketimiz, yenilikçi bakış açısı ve teknolojiye olan tutkusuyla, müşterilerine çağın gerekliliklerine uygun dijital çözümler sunmaktadır.
+            Sektördeki gelişmeleri yakından takip ederek en son yazılım teknolojilerini projelerimize entegre ediyor, müşterilerimize fark yaratan ürünler sunuyoruz.
+            Kullanıcı deneyimini en üst düzeye çıkaran modern ve akıllı sistemler geliştirerek, iş süreçlerini daha verimli hale getiren çözümler üretiyoruz. Yazılım mühendisliği alanındaki tecrübemizle, güvenilir, hızlı ve ölçeklenebilir projeler geliştiriyor; işletmelerin rekabet avantajı elde etmesine katkı sağlıyoruz.</p>
+      </div>
+  <div class="col-md-5">
+    <img src="{% static 'images/yenilikci_teknoloji.jpg' %}" class="featurette-image img-fluid mx-auto" alt="Yenilikçi Teknolojiler" width="500" height="500">
+  </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Genç ve Dinamik Ekibimizle Geleceğe Yön Veriyoruz <span class="text-body-secondary"></span></h2>
+        <p class="lead">Genç ve dinamik ekibimiz, teknolojinin en güncel trendlerini takip ederek her projeye yenilikçi bir bakış açısıyla yaklaşmaktadır.
+            Alanında uzman yazılım geliştiricileri, arayüz tasarımcıları ve proje yöneticilerimizle, her müşterimizin ihtiyacına özel çözümler üretiyoruz.
+            Ekibimizin enerjisi ve sürekli öğrenme tutkusu, bizi sektörde farklı kılan en büyük özelliklerimizden biri. Güçlü ekip ruhumuz ve disiplinli çalışma prensibimizle, müşteri beklentilerini aşan projeler ortaya koyarak, dijital dünyada iz bırakıyoruz.</p>
+      </div>
+  <div class="col-md-5">
+    <img src="{% static 'images/ekip.jpg' %}" class="featurette-image img-fluid mx-auto" alt="Yenilikçi Teknolojiler" width="500" height="500">
+  </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Stratejik Proje Danışmanlığı ile Başarıya Rehberlik Ediyoruz<span class="text-body-secondary"></span></h2>
+        <p class="lead">Proje danışmanlığı hizmetimizle, sadece yazılım geliştirme sürecinde değil, fikir aşamasından itibaren müşterilerimize yol gösteriyoruz.
+            İşletmelerin hedeflerini ve ihtiyaçlarını analiz ederek, en uygun stratejileri belirliyor ve projelerin başarıya ulaşmasını sağlıyoruz.
+            Yazılım geliştirme, kullanıcı deneyimi tasarımı ve pazar analizleri gibi kritik süreçlerde uzman ekibimizle destek vererek, müşterilerimizin iş süreçlerini daha etkin yönetmelerine yardımcı oluyoruz. Amacımız, her projeyi en verimli ve sürdürülebilir şekilde hayata geçirmek, uzun vadede başarılı sonuçlar elde edilmesini sağlamaktır.</p>
+      </div>
+   <div class="col-md-5">
+    <img src="{% static 'images/proje_danismani.png' %}" class="featurette-image img-fluid mx-auto" alt="Yenilikçi Teknolojiler" width="500" height="500">
+  </div>
+    </div>
+
+    <hr class="featurette-divider">
+      <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Güvenilir Çözümlerle İşinizi Geleceğe Taşıyoruz <span class="text-body-secondary"></span></h2>
+        <p class="lead">Müşteri memnuniyetini ve kaliteyi her zaman ön planda tutarak, yazılım dünyasında güvenilir bir iş ortağı olmayı hedefliyoruz.
+            İş süreçlerini dijitalleştirerek verimliliği artıran, güçlü güvenlik önlemleriyle desteklenmiş, uzun vadeli çözümler sunuyoruz.
+            Her projeye, sadece teknik yeterlilik açısından değil, aynı zamanda müşteri ihtiyaçlarına duyarlı bir yaklaşımla yaklaşıyoruz.
+            İş ortaklarımızın hedeflerine ulaşmasına yardımcı olmak, büyümelerine katkı sağlamak ve dijital dünyada güçlü bir yer edinmelerine destek olmak bizim en büyük motivasyon kaynağımızdır.</p>
+      </div>
+  <div class="col-md-5">
+    <img src="{% static 'images/guvenilir_cozumler.jpg' %}" class="featurette-image img-fluid mx-auto" alt="Yenilikçi Teknolojiler" width="500" height="500">
+  </div>
+
+    </div>
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+
+</main>
+       <br><br><br>
+{% endblock %}
+      <!-- contact section end -->
+      <!-- footer section start -->
+
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+      <script src="{% static 'js/plugin.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+      <script>
+         $('#myCarousel').carousel({
+            interval: false
+         });
+
+         //scroll slides on swipe for touch enabled devices
+
+         $("#myCarousel").on("touchstart", function(event){
+
+            var yClick = event.originalEvent.touches[0].pageY;
+            $(this).one("touchmove", function(event){
+
+                var yMove = event.originalEvent.touches[0].pageY;
+                if( Math.floor(yClick - yMove) > 1 ){
+                    $(".carousel").carousel('next');
+                }
+                else if( Math.floor(yClick - yMove) < -1 ){
+                    $(".carousel").carousel('prev');
+                }
+            });
+            $(".carousel").on("touchend", function(){
+                $(this).off("touchmove");
+            });
+         });
+      </script>
+   </body>
+</html>

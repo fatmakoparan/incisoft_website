@@ -1,0 +1,133 @@
+{% load static %}
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<style>
+    /* Sayfa düzeni */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Sayfanın tamamı ekran boyutunda olacak */
+    }
+
+    .content {
+        flex: 1; /* İçeriğin sayfanın geri kalan kısmını doldurmasını sağlar */
+    }
+
+    /* Footer'ı sabitlemek için */
+    footer#footer {
+        background-color: #73889a; /* Footer arka plan rengi */
+        color: #fff; /* Yazı rengi */
+        padding: 40px 0;
+        position: relative; /* Sabitleme için relative kullanıyoruz */
+    }
+
+    footer#footer .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* Footer ikonları */
+    .footer .icon {
+        font-size: 30px;
+        color: #f8f9fa;
+        margin-right: 10px;
+    }
+
+    .footer h4 {
+        color: #f8f9fa;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .footer p {
+        color: #d6d6d6;
+        margin-bottom: 10px;
+    }
+
+    .social-links a {
+        margin-right: 15px;
+        color: #f8f9fa;
+        font-size: 25px;
+        transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+        color: #007bff; /* Hover rengini ayarlayabilirsiniz */
+    }
+
+    /* Footer içindeki ikonların görünmesini sağlamak için */
+    .social-links .bi {
+        font-size: 30px;
+    }
+
+    /* Sosyal medya bağlantıları */
+    .footer .social-links {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    /* Copyright metnini aşağıya taşımak için */
+    .copyright-text {
+        margin-top: 40px; /* Metni biraz aşağıya taşıma */
+        text-align: center;
+        flex: 1;
+    }
+
+    .copyright-text p {
+        color: #d6d6d6;
+    }
+</style>
+
+<footer id="footer" class="footer dark-background">
+    <div class="container">
+        <div class="row gy-3">
+            <div class="col-lg-3 col-md-6 d-flex">
+                <i class="bi bi-geo-alt icon"></i>
+                <div class="address">
+                    <h4>Adres</h4>
+                    <p>Çaydaçıra Mahallesi Prof.Dr.Nuri Orhan Blv.No:9 İç Kapı No:221</p>
+                    <p>23000, Merkez/Elazığ</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex">
+                <i class="bi bi-telephone icon"></i>
+                <div>
+                    <h4>İletişim</h4>
+                    <p>
+                        <strong>Telefon:</strong> <span>0506 689 23 42</span><br>
+                        <strong>Email:</strong> <span>infoincisoft@gmail.com</span><br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex">
+                <div>
+                    <h4>Hizmetlerimiz</h4>
+                    <p>
+                        <strong>Pzt-Cmt:</strong> <span>09.00 - 19.00</span><br>
+                        <strong>Pazar</strong>: <span>Kapalı</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h4>Bizi Takip edin</h4>
+                <div class="social-links d-flex">
+                    <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="tiktok"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <div class="copyright-text">
+            <p>©2025 <a href="/">İnciSoft</a> Tüm hakları saklıdır.</p>
+        </div>
+    </div>
+</footer>

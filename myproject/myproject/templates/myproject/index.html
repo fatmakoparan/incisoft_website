@@ -1,0 +1,552 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+
+{% block title %}İnci Soft{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8" >
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>İnci Soft</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <!-- fevicon -->
+      <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="{% static 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css '%}">
+      <!-- fonts -->
+      <link href="{% static 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap' %}" rel="stylesheet">
+      <!-- font awesome css -->
+      <link rel="stylesheet" href="{% static 'path/to/font-awesome/css/font-awesome.min.css' %}">
+
+
+ <style>
+.container_main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.container_main img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0; /* Başlangıçta görünmez */
+    transition: opacity 0.5s ease; /* Geçiş efekti */
+    background-color: rgba(45, 45, 45, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_main:hover .overlay {
+    opacity: 1; /* Üzerine gelindiğinde görünür */
+}
+
+.text {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+/* Sıkça sorulan sorular Genel Stiller */
+.faq-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.faq-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Sol Bölüm (İkon ve Başlık) */
+.faq-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.faq-left img {
+  width: 50px;
+  height: 50px;
+}
+
+.faq-left .title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 0;
+}
+
+/* Sağ Bölüm (Sıkça Sorulan Sorular) */
+.faq-accordion {
+  width: 100%;
+}
+
+.faq-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Akordeon Stilleri */
+.faq-section .faq-wrap .faq-accordion .accordion-item {
+  border: 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.faq-section .faq-wrap .faq-accordion .accordion-item:first-of-type {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-header {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dee2e6;
+}
+
+
+.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-header .accordion-button {
+  padding: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #212529;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-header .accordion-button:hover {
+  background-color: #f1f1f1;
+}
+
+.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-header .accordion-button .number {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0d6efd;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #f2f2f2;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-header .accordion-button .faq-button {
+  position: absolute;
+  right: 0;
+  height: 32px;
+  width: 32px;
+  color: #36b7e1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(90deg);
+  transition: all 0.3s linear;
+}
+
+.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-header .accordion-button .faq-button i {
+  font-size: 15px;
+}
+
+.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-header .accordion-button:focus {
+  border: 0;
+  box-shadow: none;
+}
+
+.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  color: #36b7e1;
+  background: #ffffff;
+  box-shadow: none;
+}
+
+/* Açıklama Kısmı */
+.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-body {
+  padding: 15px 20px;
+  font-size: 16px;
+  color: #495057;
+  background-color: #f8f9fa;
+  display: none; /* Başlangıçta gizli */
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease-out; /* Yumuşak geçiş */
+}
+
+.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-collapse {
+  display: none; /* Başlangıçta gizli */
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-collapse.show {
+  display: block; /* Görünür hale gelir */
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  animation: expand 0.3s ease-out; /* Açılma animasyonu */
+}
+
+@keyframes expand {
+  from {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  to {
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+/* Açıklama kısmı için yeni durum: Tıklama sonrası açılma */
+.accordion-button.collapsed {
+  background-color: #f8f9fa; /* Tıklanabilir alan için daha belirgin arka plan */
+}
+
+/* Aktif olan sorunun açıklaması görünsün */
+.accordion-button:not(.collapsed) + .accordion-collapse {
+  display: block;
+  height: auto; /* Açıklama görünür hale gelir */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+ </style>
+
+
+</head>
+
+  <script>
+    document.querySelectorAll('.faq-accordion .accordion-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const collapseElement = item.querySelector('.accordion-collapse');
+
+        if (collapseElement.classList.contains('show')) {
+          collapseElement.classList.remove('show');
+        } else {
+          document.querySelectorAll('.faq-accordion .accordion-item .accordion-collapse').forEach(otherItem => {
+            otherItem.classList.remove('show');
+          });
+
+          collapseElement.classList.add('show');
+        }
+      });
+    });
+  </script>
+
+
+   <body>
+
+      {% block content %}
+<div class="portfolio_section">
+    <div class="portfolio_section_2">
+        <div class="row">
+            <div class="col-md-12">  <!-- Genişliği tam sayfa yapmak için col-md-8 yerine col-md-12 kullanıyoruz -->
+                <div class="container_main">
+                    <img src="{% static 'images/Anasayfa.jpg' %}" alt="" class="image">
+                    <div class="overlay">
+                        <div class="text">
+                            <div class="description">
+                                <p>Teknolojiyi geleceğe taşımak için güçlü, yenilikçi ve kullanıcı dostu yazılım çözümleri  </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+         <!-- banner section end -->
+
+      <!-- header section end -->
+      <!-- services section start -->
+      <div class="services_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12 ">
+                  <h1 class="services_taital">Verdiğimiz <span class="portfolio_taital_1">Hizmetler</span></h1>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="services_section_2">
+               <div class="row">
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="box_main ">
+                        <div class="app_icon"><img src="{% static 'images/app_icon.png' %}"></div>
+                        <div class="app_icon_1"><img src="{% static 'images/app_icon1.png' %}"></div>
+                        <h4 class="services_text">Mobil Tasarım</h4>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="box_main ">
+                        <div class="app_icon"><img src="{% static 'images/website_icon1.png' %}"></div>
+                        <div class="app_icon_1"><img src="{% static 'images/website_icon.png' %}"></div>
+                        <h4 class="services_text">Website Tasarım</h4>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="box_main ">
+                        <div class="app_icon"><img src="{% static 'images/yz_1.png' %}"></div>
+                        <div class="app_icon_1"><img src="{% static 'images/yz.png' %}"></div>
+                        <h4 class="services_text">Yapay Zeka(AI)</h4>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="box_main ">
+                        <div class="app_icon"><img src="{% static 'images/drone_1.png' %}"></div>
+                        <div class="app_icon_1"><img src="{% static 'images/drone.png' %}"></div>
+                        <h4 class="services_text">İHA/Drone</h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="readmore_bt"><a href="{% url 'service' %}">Daha Fazlası</a></div>
+            </div>
+         </div>
+      </div>
+
+
+<div class="container-wrapper">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-6 d-flex align-items-center">
+        <div>
+          <img src="{% static 'images/soru_icon.png' %}" alt="Resim" class="img-fluid">
+        </div>
+        <div class="ml-3">
+          <h2 class="title">Sıkça Sorulan Sorular</h2>
+        </div>
+      </div>
+
+      <!-- Sağ Kısım: Soru Kartları -->
+      <div class="col-lg-6">
+        <div class="accordion" id="faqAccordion">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  01. ETL Danışmanlığı hizmetiniz nedir ve nasıl işler?
+                </button>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faqAccordion">
+              <div class="card-body">
+                ETL (Extract, Transform, Load) süreçlerinde uzmanlaşmış bir ekip olarak, veri entegrasyonu, dönüştürme ve yükleme süreçlerini optimize etmekteyiz.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  02. Hangi tür veri analitiği araçlarını kullanıyorsunuz?
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+              <div class="card-body">
+                Firmamız, veri analitiği ihtiyaçlarını karşılamak için Apache Superset'i kullanmaktadır. Bu platform, etkileşimli görsel panolar ve raporlar aracılığıyla verilerinizi keşfetmenize ve analiz etmenize olanak tanır.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  03. Veri ambarı tasarımı hizmetiniz ne tür çözümler sunuyor?
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+              <div class="card-body">
+                Verilerinizi etkin bir şekilde yönetebilmek için güçlü ve ölçeklenebilir bir veri ambarı tasarımı sunuyoruz. Bu tasarımlar, verilerin etkin bir şekilde toplanmasını, saklanmasını ve analiz edilmesini sağlar.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- services section end -->
+      <!-- portfolio section start -->
+      <main>
+         <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <!-- İlk slayt, aktif olmalı -->
+               <div class="carousel-item active">
+                  <div class="slide-content__image-container">
+                     <img class="slide-content__image" src="{% static 'images/index_arkaplan.png' %}" alt="Vizyon & Misyon" width="2000" height="1000">
+
+                  </div>
+                  <div class="carousel-caption d-none d-md-block">
+                     <h5 style="font-size: 60px !important; margin-top: -150px; line-height: 1.2; text-align: center; position: relative; top: -315px; color: #97b2e4; ">Biz Kimiz?</h5>
+                     <p style="font-size: 30px !important; margin-top: -20px; line-height: 1.5; text-align: center; width: 80%; margin-left: auto; margin-right: auto; position: relative; top: -270px; color: #ffffff; ">Biz, teknolojiyi ve müşteri memnuniyetini ön planda tutarak sürekli yenilikçi çözümler sunmayı hedefleyen bir teknoloji şirketiyiz.
+                         Alanında uzman ekibimizle, her geçen gün daha iyi bir hizmet sunarak, sektördeki yerimizi sağlamlaştırıyoruz. </p>
+
+                  </div>
+               </div>
+               <!-- Diğer slaytlar -->
+               <div class="carousel-item">
+                  <div class="slide-content__image-container">
+                     <img class="slide-content__image" src="{% static 'images/index_arkaplan.png' %}" alt="Hizmetlerimiz"width="2000" height="1000">
+                  </div>
+                  <div class="carousel-caption d-none d-md-block">
+                      <h5 style="font-size: 60px !important; margin-top: -150px; line-height: 1.2; text-align: center; position: relative; top: -315px; color: #97b2e4;">Biz Kimiz?</h5>
+                     <p style="font-size: 30px !important; margin-top: -20px; line-height: 1.5; text-align: center; width: 80%; margin-left: auto; margin-right: auto; position: relative; top: -270px; color: #ffffff;">Teknolojinin sunduğu tüm imkanlardan yararlanarak, yenilikçi ve güvenilir çözümler üreten bir şirketiz.
+                         İleriye dönük vizyonumuzla, her projeyi başarıya taşımak ve müşteri ihtiyaçlarını en iyi şekilde karşılamak için çalışıyoruz. </p>
+
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="slide-content__image-container">
+                     <img class="slide-content__image" src="{% static 'images/index_arkaplan.png' %}" alt="Hizmetlerimiz"width="2000" height="1000">
+                  </div>
+                  <div class="carousel-caption d-none d-md-block">
+                      <h5 style="font-size: 60px !important; margin-top: -150px; line-height: 1.2; text-align: center; position: relative; top: -315px; color: #97b2e4;">Biz Kimiz?</h5>
+                     <p style="font-size: 30px !important; margin-top: -20px; line-height: 1.5; text-align: center; width: 80%; margin-left: auto; margin-right: auto; position: relative; top: -270px; color: #ffffff;">Sizlere en kaliteli hizmeti sunmak için çalışan, müşteri odaklı bir şirketiz.
+                         Hedefimiz, her adımda mükemmelliği yakalayarak, iş dünyasında fark yaratmak ve uzun vadeli işbirlikleri kurmaktır. </p>
+
+                  </div>
+               </div>
+            </div>
+<!-- Carousel Kontrolleri -->
+<!-- Carousel Kontrolleri -->
+<button class="carousel-control-prev" type="button" data-target="#myCarousel" data-slide="prev" style="background-color: #071f3d; opacity: 1;">
+   <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #071f3d; opacity: 1;"></span>
+</button>
+<button class="carousel-control-next" type="button" data-target="#myCarousel" data-slide="next" style="background-color: #071f3d; opacity: 1;">
+   <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #071f3d; opacity: 1;"></span>
+</button>
+</div>
+
+      </main>
+
+      <!-- blog section end -->
+      <!-- contact section start -->
+<div class="about-content-wrap">
+   <div class="row align-items-center">
+      <!-- Sol taraf (resimler) -->
+      <div class="col-lg-6">
+         <div class="about-thumb-wrap">
+
+            <div class="about-thumb-bottom" style="float: right; margin-right: 150px;">
+              <img src="{% static 'images/yazilimci.jpg' %} "alt="">
+            </div>
+             
+
+
+         </div>
+      </div>
+
+     <!-- Sağ taraf (yazılar) -->
+<div class="col-lg-6">
+   <div class="about-content">
+      <h3 class="title" style="font-size: 30px; font-weight: 700; color: #333; line-height: 1.5; text-align: left; margin-bottom: 20px;">
+         Teknolojik altyapınızı en verimli şekilde şekillendirecek yazılım çözümleriyle her adımda yanınızdayız.
+      </h3>
+      <p style="font-size: 18px; color: #666; line-height: 1.8; text-align: left;margin-left: 0px">
+         Yenilikçi ve geleceği şekillendiren teknoloji çözümleriyle işletmenizi güçlendirin. İhtiyaçlarınıza özel, alanında uzman ve deneyimli uzaktan teknoloji ekiplerimizle, dijital dönüşüm yolculuğunuzu hızlandırıyoruz.
+      </p>
+   </div>
+</div>
+
+
+
+      <!-- contact section end -->
+      <!-- project box section start -->
+      <div class="project_box">
+         <div class="container">
+            <div class="project_main">
+               <h1 class="hire_text">Bizimle iletişime geçin </h1>
+               <div class="callnow_bt"><a href="{% url 'contact' %}">İletişim</a></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+      <!-- project box section end -->
+      <!-- footer section start -->
+
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+      <script src="{% static 'js/plugin.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+
+      <script>
+  $(document).ready(function(){
+    $('.collapse').collapse({
+      toggle: false
+    });
+  });
+      </script>
+   </body>
+</html>
+
+{% endblock %}

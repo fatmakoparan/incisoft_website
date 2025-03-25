@@ -1,0 +1,162 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Hizmetlerimiz</title>
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+   <!-- Style CSS -->
+   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+   <!-- Responsive CSS -->
+   <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+   <!-- Favicon -->
+   <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+   <!-- Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+   <!-- Custom CSS for the page -->
+   <style>
+      .portfolio_section_2 .row {
+         margin: 0;
+         padding: 0;
+      }
+
+      .container_main {
+         position: relative;
+         width: 100%;
+         height: 100vh; /* Görselin ekranı tamamen kaplamasını sağlıyoruz */
+      }
+
+      .container_main img {
+         width: 100%;
+         height: 100%; /* Görselin yüksekliğini tamamen ekran yüksekliği kadar yapıyoruz */
+         object-fit: cover; /* Görselin oranını bozmadan alanı kaplamasını sağlıyoruz */
+         transition: 0.3s ease; /* Geçiş efektini ekliyoruz */
+      }
+
+      .overlay {
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         height: 100%;
+         width: 100%;
+         opacity: 0; /* Başlangıçta overlay gizli */
+         transition: opacity 0.3s ease; /* Opaklık geçişi */
+         background-color: rgba(45, 45, 45, 0.5); /* Yarı saydam overlay */
+      }
+
+      .container_main:hover .overlay {
+         opacity: 1; /* Hover olduğunda overlay görünür olur */
+      }
+
+      .text {
+         text-align: center;
+         padding: 20px;
+         position: absolute;
+         top: 50%; /* Ekranın ortasında hizalanması için */
+         left: 50%;
+         transform: translate(-50%, -50%); /* Tam olarak ortalanması için */
+         color: white; /* Yazının rengi beyaz yapıldı */
+      }
+
+      .buy_bt a {
+         color: #fff;
+         text-decoration: none;
+         background-color: #f8ca29;
+         padding: 10px 20px;
+         border-radius: 5px;
+      }
+
+      .buy_bt a:hover {
+         background-color: #e0b21f;
+      }
+   </style>
+</head>
+
+<body>
+   {% block content %}
+   <div class="portfolio_section">
+      <div class="portfolio_section_2">
+         <div class="row">
+            <!-- Full width image container -->
+            <div class="container_main">
+               <img src="{% static 'images/hizmet1.png' %}" alt="Hizmetlerimiz Görseli" class="image">
+               <div class="overlay">
+                  <div class="text">
+                     <div class="description">
+                        <p>Hizmetlerimiz</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Hizmetlerimiz section -->
+   <div class="services_section layout_padding margin_90">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12">
+               <h1 class="services_taital">Verdiğimiz <span class="portfolio_taital_1">Hizmetler</span></h1>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="services_section_2">
+            <div class="row">
+               <div class="col-lg-3 col-sm-6">
+                  <div class="box_main">
+                     <div class="app_icon"><img src="{% static 'images/app_icon.png' %}" alt="Mobil Tasarım"></div>
+                     <div class="app_icon_1"><img src="{% static 'images/app_icon1.png' %}" alt="Mobil Tasarım"></div>
+                     <h4 class="services_text">Mobil Tasarım</h4>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <div class="box_main">
+                     <div class="app_icon"><img src="{% static 'images/website_icon1.png' %}" alt="Website Tasarım"></div>
+                     <div class="app_icon_1"><img src="{% static 'images/website_icon.png' %}" alt="Website Tasarım"></div>
+                     <h4 class="services_text">Website Tasarım</h4>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <div class="box_main">
+                     <div class="app_icon"><img src="{% static 'images/yz_1.png' %}" alt="Yapay Zeka"></div>
+                     <div class="app_icon_1"><img src="{% static 'images/yz.png' %}" alt="Yapay Zeka"></div>
+                     <h4 class="services_text">Yapay Zeka(AI)</h4>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <div class="box_main">
+                     <div class="app_icon"><img src="{% static 'images/drone_1.png' %}" alt="İHA/Drone"></div>
+                     <div class="app_icon_1"><img src="{% static 'images/drone.png' %}" alt="İHA/Drone"></div>
+                     <h4 class="services_text">İHA/Drone</h4>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   {% endblock %}
+
+   <!-- JS Scripts -->
+   <script src="{% static 'js/jquery.min.js' %}"></script>
+   <script src="{% static 'js/popper.min.js' %}"></script>
+   <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+   <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+   <script src="{% static 'js/plugin.js' %}"></script>
+   <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+   <script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>

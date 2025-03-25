@@ -1,0 +1,197 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Hakkımızda </title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <!-- fevicon -->
+      <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+      <!-- font awesome css -->
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+   </head>
+
+      /* Sayfa genişliğini tamamen kaplaması için */
+.portfolio_section_2 .row {
+    margin: 0;  /* Herhangi bir margin boşluğunu kaldırıyoruz */
+    padding: 0;  /* Herhangi bir padding boşluğunu kaldırıyoruz */
+}
+
+.container_main {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Görselin ekranı tamamen kaplamasını sağlıyoruz */
+}
+
+.container_main img {
+    width: 100%;  /* Görselin genişliğini %100 yapıyoruz */
+    height: 60%;  /* Görselin yüksekliğini %60 yapıyoruz */
+    object-fit: cover;  /* Görselin oranını bozmadan alanı kaplamasını sağlıyoruz */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(45, 45, 45, 0.5);
+    margin: 0 auto;
+}
+.text {
+    text-align: center;
+    padding: 20px;
+}
+
+.buy_bt a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #f8ca29;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.buy_bt a:hover {
+    background-color: #e0b21f;
+}
+
+   <body>
+   <!-- header section start -->
+   {% block content %}
+   <!-- header section end -->
+       <div class="portfolio_section">
+    <div class="portfolio_section_1">
+        <div class="row">
+            <div class="col-md-12">  <!-- Genişliği tam sayfa yapmak için col-md-8 yerine col-md-12 kullanıyoruz -->
+                <div class="container_main">
+                    <img src="{% static 'images/blog.jpg' %}" alt="" class="image">
+                    <div class="overlay">
+                        <div class="text">
+                            <div class="description">
+                                <p>Yapay Zekâ’nın Geleceği</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- about section start -->
+<div class="about_section layout_padding">
+
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <h1 class="about_taital">Yapay Zekâ’nın Geleceği</h1>
+         </div>
+      </div>
+      <div class="about_section_2">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="about_text">
+                  <p>Yapay zekâ (YZ), son yıllarda hayatımıza hızla dahil olan ve birçok endüstride devrim yaratmaya devam eden bir
+                      teknoloji alanıdır. Günümüzde, YZ; sağlık, eğitim, ulaşım, eğlence ve hatta hukuk gibi çeşitli sektörlerde önemli roller
+                      üstlenmektedir. Bu yazıda, yapay zekâ teknolojisinin geleceğini, olası gelişmeleri ve toplumsal etkilerini ele alacağız.</p>
+
+                  <p><b>Yapay Zekâ’nın Bugünkü Durumu ve Gelişimi </b></p>
+                   <p> Yapay zekâ, makinelerin insan benzeri zekâ faaliyetlerini yerine getirmesi için geliştirilen bir bilim dalıdır.
+                       Son yıllarda, derin öğrenme ve makine öğrenimi alanlarındaki büyük ilerlemeler sayesinde,
+                       YZ'nin yetenekleri oldukça genişlemiş ve daha sofistike hale gelmiştir. Bugün, yapay zekâ teknolojileri, günlük yaşamın bir parçası haline gelmiştir:
+                       Akıllı asistanlar, otonom araçlar, tıbbi teşhisler ve kişisel öneri sistemleri bunlara örnektir.</p>
+                   <p><b>Gelecekte Yapay Zekâ'nın Gelişimi</b></p>
+                   <p><b>1. Otonom Sistemler</b></p>
+                   <p>Yapay zekânın en dikkat çekici geleceği gelişmelerinden biri, otonom sistemlerin evrimidir. Otonom araçlar, drone’lar ve insansız hava araçları (İHA'lar) gibi sistemlerin,
+                       YZ ile daha bağımsız hale gelmesi beklenmektedir. Otonom araçlar, trafik kazalarını azaltabilir, ulaşımı daha güvenli ve verimli hale getirebilir.
+                       Bu teknolojilerin daha da geliştirilmesiyle, şehir içi ulaşımda köklü değişiklikler yaşanabilir.</p>
+                   <p><b>2. YZ’nin Sağlık Sektöründeki Rolü</b></p>
+                   <p>Yapay zekânın sağlık sektöründeki potansiyeli, hastalıkların erken teşhisinden tedavi yöntemlerinin
+                       kişiselleştirilmesine kadar uzanmaktadır. YZ, büyük veri analizi ve biyolojik verilerle çalışarak,
+                       doktorlara daha doğru ve hızlı kararlar alabilme imkânı sunmaktadır. Gelecekte, YZ tabanlı sistemlerin hastalıkları çok daha erken aşamalarda tespit etmesi,
+                       sağlık hizmetlerine erişimi hızlandırabilir ve yaşam kalitesini artırabilir.</p>
+                   <p><b>3. Yapay Zeka ve Eğitim</b></p>
+                   <p> YZ'nin eğitimdeki rolü de giderek artmaktadır. Özellikle öğrenci merkezli öğrenme ve kişiselleştirilmiş eğitim yöntemleri,
+                       yapay zekâ sayesinde daha etkili hale gelecektir. YZ, öğrencilerin güçlü ve zayıf yönlerini analiz ederek, onlara özel
+                       eğitim programları oluşturabilir. Ayrıca, öğretmenlerin derslerini daha verimli bir şekilde planlamasına yardımcı olabilir.
+                       Öğrenme materyalleri, öğrenci ihtiyaçlarına göre şekillendirilebilir, bu da eğitimde daha büyük eşitlik sağlar.</p>
+                   <p><b>4. Yapay Zeka ve İş Gücü</b></p>
+                   <p>Bir diğer önemli gelişme, YZ'nin iş gücü üzerindeki etkisidir. Yapay zekâ, bazı endüstrilerde iş gücünü değiştirebilir. Bazı meslekler otomatikleştirilebilirken,
+                       bazı yeni meslekler ve iş kolları ortaya çıkacaktır. YZ'nin iş gücü üzerindeki etkisi, insanlarla makinelerin birlikte çalışacağı bir ortam yaratacak gibi görünüyor. İnsanlar daha yaratıcı, analitik ve
+                       insana özgü görevlerde odaklanırken, makineler daha rutin ve veri odaklı görevleri üstlenecek.</p>
+                   <br><br><br>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+      <!-- contact section end -->
+      <!-- footer section start -->
+
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+      <script src="{% static 'js/plugin.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+      <script>
+         $('#myCarousel').carousel({
+            interval: false
+         });
+
+         //scroll slides on swipe for touch enabled devices
+
+         $("#myCarousel").on("touchstart", function(event){
+
+            var yClick = event.originalEvent.touches[0].pageY;
+            $(this).one("touchmove", function(event){
+
+                var yMove = event.originalEvent.touches[0].pageY;
+                if( Math.floor(yClick - yMove) > 1 ){
+                    $(".carousel").carousel('next');
+                }
+                else if( Math.floor(yClick - yMove) < -1 ){
+                    $(".carousel").carousel('prev');
+                }
+            });
+            $(".carousel").on("touchend", function(){
+                $(this).off("touchmove");
+            });
+         });
+      </script>
+   </body>
+</html>
