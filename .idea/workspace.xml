@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a61baae-4d4b-4710-bbdd-47b80ca6480e" name="Changes" comment="referanslar sayfasi düzeltildi">
-      <change afterPath="$PROJECT_DIR$/myproject/myproject/static/images/incisoft_deneme_yeni.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/myproject/blog1.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/blog1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/myproject/blog2.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/blog2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/myproject/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/myproject/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/myproject/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/myproject/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/portfolio.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +21,7 @@
         <entry key="$PROJECT_DIR$" value="backup-branch" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/myproject" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -40,8 +32,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/fatmakoparan/incisoft_website_1.git",
-    "accountId": "6e196142-e559-4c5c-9562-9199f671ab19"
+    "url": "https://github.com/fatmakoparan/incisoft_website",
+    "accountId": "56bc5789-cc0b-41ce-ab66-12c79cc8e267"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -60,9 +52,9 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/kopar/OneDrive/Masaüstü/incisoft_website_1",
+    "last_opened_file_path": "/Users/diyarguzelses/PycharmProjects/incisoft_website2/myproject/myproject/static",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,7 +65,12 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/myproject/myproject/static" />
+      <recent name="$PROJECT_DIR$/myproject/myproject/templates/myproject" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/myproject/myproject/templates/myproject" />
       <recent name="C:\Users\Lenovo\incisoft_website_1\myproject\myproject\static\images" />
       <recent name="C:\Users\kopar\PycharmProjects\inci_soft\myproject\myproject\static\images" />
       <recent name="C:\Users\Lenovo\inci_soft\myproject\myproject\templates" />
@@ -108,8 +105,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.25659.43" />
-        <option value="bundled-python-sdk-181015f7ab06-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.25659.43" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
+        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
       </set>
     </attachedChunks>
   </component>
@@ -175,6 +172,7 @@
       <workItem from="1744267955353" duration="476000" />
       <workItem from="1744268551688" duration="2825000" />
       <workItem from="1744874014710" duration="642000" />
+      <workItem from="1744892871578" duration="4397000" />
     </task>
     <task id="LOCAL-00001" summary="dosyalar yüklendi">
       <option name="closed" value="true" />

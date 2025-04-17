@@ -49,7 +49,6 @@ body {
     font-weight: normal;
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
-
 }
 
 a {
@@ -192,6 +191,9 @@ img {
     box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
 }
 
+.navbar-form input {
+    border: none !important;
+}
 
 .badge {
     font-weight: 500;
@@ -236,7 +238,7 @@ button {
 }
 
 .header_bg {
-    background: #ffffff;
+    background: #000;
 }
 
 .bg-light {
@@ -253,12 +255,24 @@ button {
     margin-left: auto!important;
 }
 
-.logo {
-    width: 50px !important;  /* Logonun genişliğini küçült */
-    height: auto !important; /* Oranları koru */
-    max-width: 50px !important;
-    max-height: 50px !important;
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 18px;
+    color: #fefefd;
+    border-radius: 40px;
+    text-transform: uppercase;
 }
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #f8ca29;
+}
+
+.navbar {
+    padding: 30px 0px 30px 0px;
+}
+
 
 /* header section end */
 
@@ -376,8 +390,9 @@ button {
 .carousel-inner,
 .carousel,
 .carousel-item,
+.container,
 .fill {
-    width: 500%;
+    width: 100%;
     background-position: center center;
     background-size: cover;
 }
@@ -467,23 +482,17 @@ button {
 
 .services_section {
     width: 100%;
-    padding: 90px 0; /* Üst ve alt boşluk */
-    text-align: center; /* Başlık ve içerik ortalanacak */
-    display: flex;
-    justify-content: center; /* İçeriği yatayda ortalar */
-    align-items: center; /* İçeriği dikeyde ortalar */
-    flex-direction: column; /* Başlık ve içerik alt alta sıralansın */
+    float: left;
+    padding-top: 0px;
 }
 
 .services_taital {
     width: 100%;
     float: left;
     font-size: 40px;
-    color: #2f85cc;
+    color: #f5c729;
     font-weight: bold;
-    margin-bottom: 40px; /* Başlığın altına boşluk ekler */
 }
-
 
 .services_text {
     width: 100%;
@@ -495,26 +504,22 @@ button {
 }
 
 .services_section_2 {
-    width: 80%;
-    display: flex;
-    justify-content: center; /* İçeriği ortala */
-    flex-wrap: wrap; /* Satıra sığmayan öğeleri alta al */
-    margin: 0 auto; /* Ortalamak için */
-    padding: 0;
+    width: 100%;
+    float: left;
+    padding-top: 80px;
 }
-
 
 .box_main {
     width: 100%;
     border-radius: 100%;
-    border: 6px solid #417abf;
+    border: 6px solid #f5c729;
     height: auto;
     padding: 70px 0px;
     box-shadow: 0px 0px 60px 0px #f0f0ef;
 }
 
 .app_icon {
-    width: 25%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     align-items: center;
@@ -522,7 +527,7 @@ button {
 }
 
 .app_icon_1 {
-    width: 25%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     align-items: center;
@@ -531,11 +536,11 @@ button {
 }
 
 .box_main:hover .services_text {
-    color: #417abf;
+    color: #f5c729;
 }
 
 .services_text.active {
-    color: #2f85cc;
+    color: #f5c729;
 }
 
 .box_main:hover .app_icon_1 {
@@ -567,7 +572,7 @@ button {
 }
 
 .readmore_bt a:hover {
-    background-color: #30538a;
+    background-color: #f5c729;
     color: #fefefd;
 }
 
@@ -587,7 +592,7 @@ button {
     width: 100%;
     float: left;
     font-size: 40px;
-    color: #2f85cc;
+    color: #f5c729;
     font-weight: bold;
     text-align: center;
 }
@@ -599,40 +604,14 @@ button {
 
 .portfolio_section_2 {
     width: 100%;
-     padding: 0;
-    margin: 0;
+    float: left;
+    padding-top: 30px;
 }
 
 .image {
     display: block;
     width: 100%;
-    height: 100%;
-}
-
-/* İçerik genişliği tamamen ekranı kaplasın */
-.container {
-  max-width: 100% !important; /* İçeriğin maksimum genişliğini tam ekran yap */
-  width: 100% !important; /* Genişliği tamamen kaplasın */
-  margin: 0; /* Ortalamayı kaldır */
-  padding: 10px; /* İç boşlukları biraz artır */
-  border-radius: 0; /* Köşe yuvarlatmalarını kaldır, full width görünüm için */
-  box-shadow: none; /* Kenar gölgelerini kaldırarak full width bir his ver */
-
-}
-
-
-.container_main:hover .overlay {
-    opacity: 1; /* Hover olduğunda kararma efekti belirsin */
-}
-
-.text {
-    color: #ffffff;
-    font-size: 60px;
-    position: absolute;
-    top: 50%;
-    left: 0; /* Sol tarafa yasla */
-    transform: translateY(-50%); /* Yalnızca dikeyde ortalama */
-    width: 100%; /* Genişliği %100 yap */
+    height: auto;
 }
 
 .overlay {
@@ -641,38 +620,32 @@ button {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0); /* Başlangıçta görünmez */
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0; /* Varsayılan olarak görünmez */
-    transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Geçiş efekti eklendi */
-}
-
-.container_main:hover .overlay {
-    opacity: 1; /* Hover olduğunda görünür yap */
-    background-color: rgba(0, 0, 0, 0.5); /* Hover durumunda arka planı karart */
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(45, 45, 45, 0.5);
+    margin: 0 auto;
 }
 
 .container_main {
-      width: 100%;
     position: relative;
-    overflow: hidden; /* Taşan içerikleri gizle */
 }
 
-
-.image {
-    width: 100%;
-    height: auto;
+.container_main:hover .overlay {
+    opacity: 1;
 }
 
-.description p {
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 1.5;
-    margin: 0 20px;
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 80%;
 }
 
 .btn_main {
@@ -692,7 +665,7 @@ button {
     text-align: center;
     font-size: 14px;
     color: #252525;
-    background-color: #2f85cc;
+    background-color: #fefefd;
     padding: 10px 0px;
     border-radius: 5px;
     font-weight: bold;
@@ -730,232 +703,13 @@ button {
 
 /* portfolio section end */
 
-/* Sıkça sorulan sorular Genel Stiller */
-.faq-section {
-  padding: 80px 0;
-  background-color: #f8f9fa;
-}
-
-.faq-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Eşit dağılım yap */
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-
-}
-
-/* Tüm içerik responsive olsun */
-* {
-  box-sizing: border-box;
-  max-width: 100%;
-}
-
-/* Sol Bölüm (İkon ve Başlık) */
-.faq-left {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.col-md-12 {
-    width: 100% !important;
-    padding: 0 !important; /* Yan boşlukları sıfırla */
-    margin: 0 !important;
-}
-.faq-left img {
-  width: 50px;
-  height: 50px;
-}
-
-.faq-left .title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #212529;
-  margin-bottom: 0;
-}
-
-/* Sağ Bölüm (Sıkça Sorulan Sorular) */
-.faq-accordion {
-  width: 100%;
-}
-
-.faq-col {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* Akordeon Stilleri */
-.faq-section .faq-wrap .faq-accordion .accordion-item {
-  border: 0;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #e5e5e5;
-  background-color: #ffffff;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.faq-section .faq-wrap .faq-accordion .accordion-item:first-of-type {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-header {
-  padding-top: 20px;
-  padding-bottom: 30px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #dee2e6;
-}
-
-.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-header .accordion-button {
-  padding: 0;
-  font-size: 18px;
-  font-weight: 500;
-  color: #212529;
-  background-color: transparent;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  transition: all 0.3s linear;
-  cursor: pointer;
-}
-
-.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-header .accordion-button:hover {
-  background-color: #f1f1f1;
-}
-
-.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-header .accordion-button .number {
-  font-size: 18px;
-  font-weight: 700;
-  color: #0d6efd;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  background: #f2f2f2;
-  border-radius: 50%;
-  margin-right: 20px;
-}
-
-.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-header .accordion-button .faq-button {
-  position: absolute;
-  right: 0;
-  height: 32px;
-  width: 32px;
-  color: #36b7e1;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: rotate(90deg);
-  transition: all 0.3s linear;
-}
-
-.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-header .accordion-button .faq-button i {
-  font-size: 15px;
-}
-
-.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-header .accordion-button:focus {
-  border: 0;
-  box-shadow: none;
-}
-
-.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
-  color: #36b7e1;
-  background: #ffffff;
-  box-shadow: none;
-}
-
-/* Açıklama Kısmı */
-.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-body {
-  padding: 15px 20px;
-  font-size: 16px;
-  color: #495057;
-  background-color: #f8f9fa;
-  display: none; /* Initially hidden */
-  overflow: hidden;
-  height: 0;
-  transition: height 0.3s ease-out; /* Smooth transition */
-}
-
-/* Açık olan öğeler */
-.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-collapse {
-  display: none;  /* Initially hide collapse sections */
-}
-
-.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-collapse.show {
-  display: block;
-  height: auto; /* Automatically adjust height */
-  animation: expand 0.3s ease-out; /* Add expand animation */
-}
-
-@keyframes expand {
-  from {
-    height: 0;
-  }
-  to {
-    height: auto;
-  }
-}
-
-/* Açıklama kısmı için yeni durum: Tıklama sonrası açılma */
-.accordion-button.collapsed {
-  background-color: #f8f9fa; /* Tıklanabilir alan için daha belirgin arka plan */
-}
-
-/* Aktif olan sorunun açıklaması görünsün */
-.accordion-button:not(.collapsed) + .accordion-collapse {
-  display: block;
-  height: auto; /* Açıklama görünür hale gelir */
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.faq-section .faq-wrap .faq-accordion .accordion-item .accordion-body p {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  color: #495057;
-  background-color: #f8f9fa;
-}
 
 /* blog section start */
-
-.blog_box {
-    position: relative;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.blog_box:hover {
-    transform: scale(1.1);
-    z-index: 10;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.blog_img, .blog_img_2 {
-    transition: all 0.3s ease;
-}
-
-.blog_box:hover .blog_img, .blog_box:hover .blog_img_2 {
-    transform: scale(1.05);
-}
 
 .blog_section {
     width: 100%;
     float: left;
-    background-image: url(../images/iletisim1.jpg);
+    background-image: url(../images/blog-bg.png);
     height: 550px;
     background-size: cover;
     margin-bottom: 410px;
@@ -965,7 +719,7 @@ button {
     width: 100%;
     float: left;
     font-size: 40px;
-    color: #2f85cc;;
+    color: #f5c729;
     font-weight: bold;
     text-align: center;
 }
@@ -1001,7 +755,7 @@ button {
 
 .blog_img {
     width: 100%;
-    background-image: url(../images/blog_yazi_1.jpg);
+    background-image: url(../images/blog-img1.png);
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -1009,7 +763,7 @@ button {
 
 .blog_img_2 {
     width: 100%;
-    background-image: url(../images/blog_yazı2.jpg);
+    background-image: url(../images/blog-img2.png);
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -1031,7 +785,7 @@ button {
     text-align: center;
     text-transform: uppercase;
     padding: 14px 0px;
-    background-color: #2f85cc;
+    background-color: #f5c729;
 }
 
 .prep_text {
@@ -1092,7 +846,7 @@ button {
     width: 100%;
     float: left;
     font-size: 40px;
-    color: #2f85cc;
+    color: #f5c729;
     font-weight: bold;
     text-align: center;
 }
@@ -1159,7 +913,7 @@ textarea#comment.massage-bt::placeholder {
     text-align: center;
     font-size: 16px;
     color: #fefefd;
-    background-color: #2f85cc;
+    background-color: #fa7e23;
     padding: 14px;
     margin-top: 40px;
     display: block;
@@ -1196,7 +950,6 @@ textarea#comment.massage-bt::placeholder {
     font-size: 30px;
     color: #252f2d;
     text-transform: uppercase;
-    margin-left: 20px; /* Sağ tarafa 20 piksel kaydırır */
     font-weight: bold;
     padding-bottom: 0px;
     padding-top: 8px;
@@ -1206,25 +959,22 @@ textarea#comment.massage-bt::placeholder {
     width: 200px;
     float: right;
     text-align: right;
-    margin-left: -65px; /* 50 piksel sola kaydırır, ihtiyaca göre artır/azalt */
 }
-
 
 .callnow_bt a {
     width: 100%;
     float: right;
     font-size: 16px;
     color: #fefefd;
-    background-color:  #252f2d;
+    background-color: #fa7e23;
     padding: 14px;
     border-radius: 5px;
     text-align: center;
-
 }
 
 .callnow_bt a:hover {
     color: #fefefd;
-    background-color: #2f85cc;
+    background-color: #252f2d;
 }
 
 
@@ -1315,163 +1065,3 @@ textarea#comment.massage-bt::placeholder {
 .margin_90{
     margin: 90px 0px;
 }
-
-   /* Kariyere yönlendiren kartın Genel Stilleri */
-div.card-hover-effect {
-  position: relative !important;
-  overflow: hidden !important;
-  background: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(0px) !important;
-  transition: background 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out !important;
-}
-
-div.card-hover-effect:hover {
-  background: rgba(255, 255, 255, 0.2) !important;
-  backdrop-filter: blur(10px) !important;
-}
-
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-.card-header {
-  background-color: #f9f9f9;
-  color: white;
-  font-weight: bold;
-}
-
-
-
-.card-body {
-  background-color: #f8f9fa;
-}
-.btn-link {
-  color: #000000;
-  text-decoration: none;
-}
-
-.title {
-  font-weight: 700; /* Daha kalın yazı */
-  font-size: 28px;
-  padding-left: 50px; /* Daha fazla sağa kaydır */
-    color: #071F3D; /* Mavi renk */
-}
-
-.container-wrapper {
-  background-color: #f9f9f9; /* Açık gri arka plan */
-  width: 100%; /* Tüm genişliği kaplamasını önle */
-  padding: 50px 0; /* Üst ve alt boşluk */
-  display: flex;
-  justify-content: center; /* Ortalamak için */
-}
-
-.container.mt-5 {
-  max-width: 1100px; /* İçeriğin maksimum genişliğini biraz küçülttüm */
-  width: 90%; /* Responsive olması için genişliği %90 yaptım */
-  margin: 0 auto; /* Ortalamak için */
-  padding: 30px; /* İç boşluk */
-  border-radius: 10px; /* Köşeleri yuvarlatma */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
-  background-color: white; /* İç kutunun arka planı */
-}
-
-.col-lg-6 {
-  flex: 1; /* İki kolon da eşit genişlik alsın */
-  max-width: 50%; /* Her biri ekranın yarısını kaplasın */
-  padding: 20px; /* İçerikler arasında biraz boşluk bırak */
-}
-
-@media (max-width: 768px) {
-    .text {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .faq-left .title {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .faq-left img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .faq-section {
-        padding: 40px 15px;
-    }
-
-    .row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .container_main img {
-        height: 300px;
-    }
-
-    .overlay {
-        flex-direction: column;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .services_text {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 576px) {
-    .container_main img {
-        height: 200px;
-    }
-
-    .services_text {
-        font-size: 14px;
-    }
-
-    .faq-section .accordion-button .number {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
-    }
-
-    .faq-section .accordion-button {
-        font-size: 16px;
-    }
-
-    .overlay .text p {
-        font-size: 13px;
-    }
-}
-
-
-.quick-links h4 {
-    color: #f8f9fa;
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.quick-links ul {
-    padding-left: 0;
-    list-style: none;
-}
-
-.quick-links ul li {
-    margin-bottom: 10px;
-}
-
-.quick-links ul li a {
-    color: #fff; /* Beyaz renk */
-    text-decoration: none;
-    transition: color 0.3s, transform 0.3s; /* Renk ve hareket için geçiş süresi */
-    display: inline-block; /* Kayma için inline-block kullanılması gerekiyor */
-}
-
-.quick-links ul li a:hover {
-    color: #326195;
-    transform: translateX(10px); /* Sağ kayma efekti */
-}
-
-
