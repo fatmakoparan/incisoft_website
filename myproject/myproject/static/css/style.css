@@ -192,9 +192,6 @@ img {
     box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
 }
 
-.navbar-form input {
-    border: none !important;
-}
 
 .badge {
     font-weight: 500;
@@ -254,24 +251,6 @@ button {
 .ml-auto,
 .mx-auto {
     margin-left: auto!important;
-}
-
-.navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 20px;
-    padding-left: 20px;
-    font-size: 18px;
-    color: #000000;
-    border-radius: 40px;
-    text-transform: uppercase;
-}
-
-.navbar-light .navbar-nav .nav-link:focus,
-.navbar-light .navbar-nav .nav-link:hover {
-    color: #4b81ed;
-}
-
-.navbar {
-    padding: 30px 0px 30px 0px;
 }
 
 .logo {
@@ -1217,6 +1196,7 @@ textarea#comment.massage-bt::placeholder {
     font-size: 30px;
     color: #252f2d;
     text-transform: uppercase;
+    margin-left: 20px; /* Sağ tarafa 20 piksel kaydırır */
     font-weight: bold;
     padding-bottom: 0px;
     padding-top: 8px;
@@ -1226,7 +1206,9 @@ textarea#comment.massage-bt::placeholder {
     width: 200px;
     float: right;
     text-align: right;
+    margin-left: -65px; /* 50 piksel sola kaydırır, ihtiyaca göre artır/azalt */
 }
+
 
 .callnow_bt a {
     width: 100%;
@@ -1237,6 +1219,7 @@ textarea#comment.massage-bt::placeholder {
     padding: 14px;
     border-radius: 5px;
     text-align: center;
+
 }
 
 .callnow_bt a:hover {
@@ -1399,32 +1382,96 @@ body {
   padding: 20px; /* İçerikler arasında biraz boşluk bırak */
 }
 
-/* Küçük ekranlarda tek sütun yap */
-@media (max-width: 992px) {
-  .col-lg-6 {
-    max-width: 100%; /* Küçük ekranlarda tam genişlik alsın */
-  }
-}
-/* Responsive ekranlar için genişliği ayarlayalım */
-@media (max-width: 1200px) {
-  .container {
-    width: 85%;
-    max-width: 900px ;
-  }
-}
-
-
-@media (max-width: 992px) {
-  .container {
-    width: 95%;
-    max-width: 750px;
-  }
-}
-
 @media (max-width: 768px) {
-  .container {
-    width: 100%;
-    max-width: 600px;
-  }
+    .text {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .faq-left .title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .faq-left img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .faq-section {
+        padding: 40px 15px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container_main img {
+        height: 300px;
+    }
+
+    .overlay {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .services_text {
+        font-size: 16px;
+    }
 }
+
+@media (max-width: 576px) {
+    .container_main img {
+        height: 200px;
+    }
+
+    .services_text {
+        font-size: 14px;
+    }
+
+    .faq-section .accordion-button .number {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .faq-section .accordion-button {
+        font-size: 16px;
+    }
+
+    .overlay .text p {
+        font-size: 13px;
+    }
+}
+
+
+.quick-links h4 {
+    color: #f8f9fa;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.quick-links ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.quick-links ul li {
+    margin-bottom: 10px;
+}
+
+.quick-links ul li a {
+    color: #fff; /* Beyaz renk */
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s; /* Renk ve hareket için geçiş süresi */
+    display: inline-block; /* Kayma için inline-block kullanılması gerekiyor */
+}
+
+.quick-links ul li a:hover {
+    color: #326195;
+    transform: translateX(10px); /* Sağ kayma efekti */
+}
+
 

@@ -1,6 +1,7 @@
 {% extends 'base_generic.html' %}
 {% load static %}
 
+{% block title %}Kariyer{% endblock %}
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -130,7 +131,7 @@
                         <input type="text" class="mail_text" placeholder="Your Email" name="Your Email">
                         <input type="text" class="mail_text" placeholder="Your Phone" name="Your Phone">
                         <textarea class="massage-bt" placeholder="Your Massage" rows="5" id="comment" name="Your Massage"></textarea>
-                        <div class="send_bt"><a href="#">Send Now</a></div>
+                        <div class="send_bt"><a href="#">Gönder</a></div>
                      </div>
                   </div>
                </div>
@@ -140,7 +141,6 @@
       {% endblock %}
       <!-- contact section end -->
       <!-- footer section start -->
-
       <!-- copyright section end -->
       <!-- Javascript files-->
       <script src="{% static 'js/jquery.min.js' %}"></script>

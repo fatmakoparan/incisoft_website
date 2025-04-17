@@ -1,63 +1,96 @@
 {% load static %}
 
 <style>
-    /* Logo Boyutunu Küçültme */
-    .navbar .logo img {
-        width: 200px !important;
-        height: auto !important;
-        max-width: 250px !important;
-        max-height: 250px !important;
+    /* Logo Boyutunu Küçültme ve Menü ile Arayı Açma */
+.navbar .logo img {
+    width: 200px !important; /* Logo boyutunu küçülttük */
+    height: auto !important;
+    max-width: 200px !important;
+    max-height: 200px !important;
+    margin-right: 30px; /* Menü ile arasındaki mesafeyi artırdık */
+}
+  
+    
+   .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 20px;
+      padding: 10px 20px;
+      background-color: white;
     }
 
-    /* Header'ı sabitleme */
-    .header_section {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        z-index: 9999;
-    }
-
-    body {
-        padding-top: 50px;
-    }
-
-    /* Dropdown menü stilleri */
-    .dropdown-menu {
+       /* 🔻 Ekran daralınca menü kaybolsun */
+    @media (max-width: 768px) {
+      .menu {
         display: none;
-        position: absolute;
-        background-color: #ffffff;
-        min-width: 180px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        z-index: 1000;
+      }
     }
+/* Header'ı sabitleme */
+.header_section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+}
 
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
+/* Sayfa içeriğini logo altında hizalama */
+body {
+    padding-top: 80px; /* Sabit navbar yüksekliği kadar boşluk ekledik */
+}
 
-    .dropdown-menu a {
-        color: #333;
-        padding: 10px 15px;
-        display: block;
-        text-decoration: none;
-    }
+/* Dropdown menü stilleri */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 180px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+}
 
-    .dropdown-menu a:hover {
-        background-color: #f8f9fa;
-    }
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f8f9fa;
+}
+
+.logo-wrapper {
+    flex-shrink: 0; /* Logo'nun küçülmesini engeller */
+    margin-right: 170px; /* Menüyle arasında boşluk */
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
 </style>
 
 <div class="header_section header_bg">
    <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-         <div class="logo">
-            <a href="{% url 'index' %}">
-                <img src="{% static 'images/incisoft_deneme.png' %}" alt="Logo">
-            </a>
-         </div>
+         <div class="logo-wrapper">
+   <div class="logo">
+      <a href="{% url 'index' %}">
+         <img src="{% static 'images/incisoft_deneme_yeni.png' %}" alt="Logo">
+      </a>
+   </div>
+</div>
+
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

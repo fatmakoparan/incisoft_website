@@ -4,43 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a61baae-4d4b-4710-bbdd-47b80ca6480e" name="Changes" comment="blog kisminda degisikilik yapildii">
-      <change afterPath="$PROJECT_DIR$/myproject/myproject/static/images/blog_yazi_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myproject/myproject/static/images/blog_yazı2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myproject/myproject/static/images/ekip.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myproject/myproject/static/images/guvenilir_cozumler.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myproject/myproject/static/images/proje_danismani.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myproject/myproject/static/images/yenilikci_teknoloji.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/blog2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/vision.html" afterDir="false" />
+    <list default="true" id="5a61baae-4d4b-4710-bbdd-47b80ca6480e" name="Changes" comment="referanslar sayfasi düzeltildi">
+      <change afterPath="$PROJECT_DIR$/myproject/myproject/static/images/incisoft_deneme_yeni.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myproject/myproject/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/static/images/blog-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/static/images/blog-img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/static/images/blog-img2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/static/images/coding-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/static/images/icon-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/static/images/icon-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/static/images/icon-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/static/images/icon-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/static/images/icon-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/base_generic.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/base_generic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/myproject/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/myproject/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/blog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/myproject/blog1.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/blog1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/myproject/blog2.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/blog2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/myproject/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/myproject/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/myproject/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/myproject/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/myproject/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/portfolio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/templates/myproject/service.html" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/templates/myproject/service.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/myproject/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/myproject/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -49,6 +30,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/myproject" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -56,12 +38,12 @@
     &quot;assignee&quot;: &quot;fatmakoparan&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/edaculum/inci_soft.git&quot;,
-    &quot;accountId&quot;: &quot;6e196142-e559-4c5c-9562-9199f671ab19&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/fatmakoparan/incisoft_website_1.git",
+    "accountId": "6e196142-e559-4c5c-9562-9199f671ab19"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -71,26 +53,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kopar/PycharmProjects/inci_soft_1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/kopar/OneDrive/Masaüstü/incisoft_website_1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\incisoft_website_1\myproject\myproject\static\images" />
       <recent name="C:\Users\kopar\PycharmProjects\inci_soft\myproject\myproject\static\images" />
       <recent name="C:\Users\Lenovo\inci_soft\myproject\myproject\templates" />
     </key>
@@ -182,6 +166,15 @@
       <workItem from="1742545833191" duration="807000" />
       <workItem from="1742563581369" duration="572000" />
       <workItem from="1742896911198" duration="1107000" />
+      <workItem from="1742901300248" duration="4825000" />
+      <workItem from="1742906200831" duration="713000" />
+      <workItem from="1742907077998" duration="4177000" />
+      <workItem from="1744108439315" duration="8299000" />
+      <workItem from="1744180148762" duration="8516000" />
+      <workItem from="1744188959062" duration="2719000" />
+      <workItem from="1744267955353" duration="476000" />
+      <workItem from="1744268551688" duration="2825000" />
+      <workItem from="1744874014710" duration="642000" />
     </task>
     <task id="LOCAL-00001" summary="dosyalar yüklendi">
       <option name="closed" value="true" />
@@ -271,7 +264,55 @@
       <option name="project" value="LOCAL" />
       <updated>1741597581713</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="düzenleme yapildi">
+      <option name="closed" value="true" />
+      <created>1742906348424</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1742906348424</updated>
+    </task>
+    <task id="LOCAL-00013" summary="style düzenlendi">
+      <option name="closed" value="true" />
+      <created>1742906540012</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1742906540012</updated>
+    </task>
+    <task id="LOCAL-00014" summary="style düzenlendi">
+      <option name="closed" value="true" />
+      <created>1742906622930</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1742906622930</updated>
+    </task>
+    <task id="LOCAL-00015" summary="style düzenlendi">
+      <option name="closed" value="true" />
+      <created>1742906804936</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1742906804936</updated>
+    </task>
+    <task id="LOCAL-00016" summary="referanslar sayfasi düzeltildi">
+      <option name="closed" value="true" />
+      <created>1744180244570</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1744180244570</updated>
+    </task>
+    <task id="LOCAL-00017" summary="referanslar sayfasi düzeltildi">
+      <option name="closed" value="true" />
+      <created>1744180885636</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1744180885636</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,6 +341,9 @@
     <MESSAGE value="yazı degisikligi yapildi" />
     <MESSAGE value="yazı degisikligii yapildi" />
     <MESSAGE value="blog kisminda degisikilik yapildii" />
-    <option name="LAST_COMMIT_MESSAGE" value="blog kisminda degisikilik yapildii" />
+    <MESSAGE value="düzenleme yapildi" />
+    <MESSAGE value="style düzenlendi" />
+    <MESSAGE value="referanslar sayfasi düzeltildi" />
+    <option name="LAST_COMMIT_MESSAGE" value="referanslar sayfasi düzeltildi" />
   </component>
 </project>

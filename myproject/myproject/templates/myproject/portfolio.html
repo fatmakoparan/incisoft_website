@@ -1,6 +1,7 @@
 {% extends 'base_generic.html' %}
 {% load static %}
 
+{% block title %}Referanslar{% endblock %}
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -46,6 +47,7 @@
     height: 100vh; /* Görselin ekranı tamamen kaplamasını sağlıyoruz */
 }
 
+
 .container_main img {
     width: 100%;  /* Görselin genişliğini %100 yapıyoruz */
     height: 60%;  /* Görselin yüksekliğini %60 yapıyoruz */
@@ -80,6 +82,7 @@
 .buy_bt a:hover {
     background-color: #e0b21f;
 }
+   
 
    <body>
       <!-- header section start -->
@@ -103,88 +106,23 @@
         </div>
     </div>
 </div>
-      <!-- header section end -->
-      <!-- portfolio section start -->
       <div class="portfolio_section layout_padding">
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-12">
-                  <h1 class="portfolio_taital">İş <span class="portfolio_taital_1">Ortaklarımız</span></h1>
-               </div>
-            </div>
-            <div class="portfolio_section">
-               <div class="portfolio_section_2">
-                  <div class="row">
-                     <div class="col-md-8">
-                        <div class="container_main">
-                           <img src="{% static 'images/img-1.png' %}" alt="" class="image">
-                           <div class="overlay">
-                              <div class="text">
-                                 <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">See More</a></div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-4">
-                        <div class="container_main">
-                           <img src="{% static 'images/img-2.png' %}" alt="" class="image">
-                           <div class="overlay">
-                              <div class="text">
-                                 <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">See More</a></div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="portfolio_section_2">
-                  <div class="row">
-                     <div class="col-md-4">
-                        <div class="container_main">
-                           <img src="{% static 'images/img-3.png' %}" alt="" class="image">
-                           <div class="overlay">
-                              <div class="text">
-                                 <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">See More</a></div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-4">
-                        <div class="container_main">
-                           <img src="{% static 'images/img-4.png' %}" alt="" class="image">
-                           <div class="overlay">
-                              <div class="text">
-                                 <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">See More</a></div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-4">
-                        <div class="container_main">
-                           <img src="{% static 'images/img-5.png' %}" alt="" class="image">
-                           <div class="overlay">
-                              <div class="text">
-                                 <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">See More</a></div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
+   <div class="container text-center">
+      <h1 class="portfolio_taital">İş <span class="portfolio_taital_1">Ortaklarımız</span></h1>
+       
+      <p class="mb-4" style="font-size: 18px;">
+         Şu an için resmi iş ortaklarımız listelenmemektedir. Ancak kısa bir süre sonra birlikte yürüttüğümüz projeleri burada gururla paylaşacağız 💼✨
+      </p>
+      <img src="{% static 'images/referans_is_ortagı.jpeg' %}" alt="Referanslar" class="img-fluid rounded mb-4" style="max-height: 400px; object-fit: cover;">
 
-         </div>
+      
+      <div class="mt-5 p-4 bg-light rounded">
+         <h4>Sen de referanslarımız arasında yer almak ister misin?</h4>
+         <p>Projeni hayata geçirmek için bizimle iletişime geç!</p>
+         <a href="{% url 'contact' %}" class="send_bt a">İletişime Geç</a>
       </div>
+   </div>
+</div>
       {% endblock %}
       <!-- portfolio section end -->
       <!-- footer section start -->

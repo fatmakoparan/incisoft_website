@@ -10,7 +10,8 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+       
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
       <title>İnci Soft</title>
@@ -265,6 +266,56 @@
   padding-bottom: 10px;
 }
 
+
+/* Akordeon Stilleri */
+.accordion .card {
+  border: none;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.accordion .card-header {
+  padding: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.accordion .card-header .btn-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #212529;
+  text-decoration: none;
+    
+    white-space: normal; /* Satır sonlarında kırılmaya izin ver */
+  word-wrap: break-word; /* Gerekirse kelimeyi böler */
+  overflow-wrap: break-word; /* Yeni tarayıcılar için güvenli */
+}
+
+.accordion .card-header .btn-link:hover {
+  text-decoration: none;
+}
+
+.accordion .card-body {
+  padding: 15px;
+  font-size: 16px;
+  color: #495057;
+  background-color: #f8f9fa;
+}
+
+.btn.btn-link {
+  white-space: normal !important;
+  text-align: left;
+  width: 100%;
+  word-break: break-word;
+}
+
  </style>
 
 
@@ -328,28 +379,28 @@
          <div class="container">
             <div class="services_section_2">
                <div class="row">
-                  <div class="col-lg-3 col-sm-6">
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                      <div class="box_main ">
                         <div class="app_icon"><img src="{% static 'images/app_icon.png' %}"></div>
                         <div class="app_icon_1"><img src="{% static 'images/app_icon1.png' %}"></div>
                         <h4 class="services_text">Mobil Tasarım</h4>
                      </div>
                   </div>
-                  <div class="col-lg-3 col-sm-6">
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                      <div class="box_main ">
                         <div class="app_icon"><img src="{% static 'images/website_icon1.png' %}"></div>
                         <div class="app_icon_1"><img src="{% static 'images/website_icon.png' %}"></div>
                         <h4 class="services_text">Website Tasarım</h4>
                      </div>
                   </div>
-                  <div class="col-lg-3 col-sm-6">
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                      <div class="box_main ">
                         <div class="app_icon"><img src="{% static 'images/yz_1.png' %}"></div>
                         <div class="app_icon_1"><img src="{% static 'images/yz.png' %}"></div>
                         <h4 class="services_text">Yapay Zeka(AI)</h4>
                      </div>
                   </div>
-                  <div class="col-lg-3 col-sm-6">
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                      <div class="box_main ">
                         <div class="app_icon"><img src="{% static 'images/drone_1.png' %}"></div>
                         <div class="app_icon_1"><img src="{% static 'images/drone.png' %}"></div>
@@ -366,7 +417,7 @@
 <div class="container-wrapper">
   <div class="container mt-5">
     <div class="row">
-      <div class="col-lg-6 d-flex align-items-center">
+      <div class="col-12 col-md-6 d-flex align-items-center mb-3 mb-md-0">
         <div>
           <img src="{% static 'images/soru_icon.png' %}" alt="Resim" class="img-fluid">
         </div>
@@ -376,49 +427,63 @@
       </div>
 
       <!-- Sağ Kısım: Soru Kartları -->
-      <div class="col-lg-6">
+      <div class="col-12 col-md-6">
         <div class="accordion" id="faqAccordion">
           <div class="card">
-            <div class="card-header">
+            <div class="card-header" id="headingOne">
               <h5 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  01. ETL Danışmanlığı hizmetiniz nedir ve nasıl işler?
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="white-space: normal; text-align: left; width: 100%; word-break: break-word;">
+                  01. Incisoft hangi yazılım hizmetlerini sunuyor ve hangi sektörlere hitap ediyor?
                 </button>
               </h5>
             </div>
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faqAccordion">
               <div class="card-body">
-                ETL (Extract, Transform, Load) süreçlerinde uzmanlaşmış bir ekip olarak, veri entegrasyonu, dönüştürme ve yükleme süreçlerini optimize etmekteyiz.
+                Incisoft, teknoloji ve yazılım çözümleri konusunda geniş bir hizmet yelpazesi sunmaktadır. Bu hizmetler arasında:
+
+                Mobil Uygulama Geliştirme: Kullanıcı dostu, yenilikçi ve performans odaklı mobil uygulamalar geliştirilir. Bu hizmet, özellikle mobil platformlarda varlıklarını artırmak isteyen işletmeler için idealdir.
+
+                Yapay Zeka (AI): Yapay zeka teknolojileri ile işletmelerin verimliliğini artıracak çözümler sunar. Veri analizi, tahminleme ve otomasyon gibi alanlarda hizmet verir.
+
+                Görüntü İşleme: Görüntü ve video işleme teknolojileri ile özel uygulamalar geliştirilir. Bu, güvenlik, sağlık, otomotiv gibi sektörlerde kullanılır.
+
+                Drone Teknolojileri: İHA/Drone sistemleri ve yazılımlarını geliştirir. Tarım, haritacılık, güvenlik ve lojistik gibi sektörlere hizmet verir.
+
+                Website Tasarımı ve Geliştirme: Profesyonel web tasarımları, e-ticaret çözümleri ve içerik yönetim sistemleri (CMS) ile online varlık oluşturur.
+
+                Proje Danışmanlığı: İşletmelere özel yazılım projeleri için strateji, planlama ve uygulama aşamalarında danışmanlık sağlar.
               </div>
             </div>
           </div>
 
           <div class="card">
-            <div class="card-header">
+            <div class="card-header" id="headingTwo">
               <h5 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  02. Hangi tür veri analitiği araçlarını kullanıyorsunuz?
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="white-space: normal; text-align: left; width: 100%; word-break: break-word;">
+                  02. Müşteriler, Incisoft ile iletişime geçmek veya teklif almak için hangi adımları izlemeli?
                 </button>
               </h5>
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
               <div class="card-body">
-                Firmamız, veri analitiği ihtiyaçlarını karşılamak için Apache Superset'i kullanmaktadır. Bu platform, etkileşimli görsel panolar ve raporlar aracılığıyla verilerinizi keşfetmenize ve analiz etmenize olanak tanır.
+                Müşteriler, web sitesinde yer alan “İletişim” sayfasını ziyaret ederek bir form doldurabilir ya da doğrudan e-posta veya telefon aracılığıyla iletişime geçebilir. Ayrıca, sosyal medya hesapları üzerinden de bilgi alabilirler.
               </div>
             </div>
           </div>
 
           <div class="card">
-            <div class="card-header">
+              <div class="card-header" id="headingThree">
               <h5 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  03. Veri ambarı tasarımı hizmetiniz ne tür çözümler sunuyor?
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="white-space: normal; text-align: left; width: 100%; word-break: break-word;">
+                  03. Web sitesinde sunulan projeler veya referanslar bölümü mevcut mu? 
                 </button>
               </h5>
             </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
               <div class="card-body">
-                Verilerinizi etkin bir şekilde yönetebilmek için güçlü ve ölçeklenebilir bir veri ambarı tasarımı sunuyoruz. Bu tasarımlar, verilerin etkin bir şekilde toplanmasını, saklanmasını ve analiz edilmesini sağlar.
+                Web sitesinin üst kısmında “Referanslar” bölümü yer alıyor. Bu bölümde, Incisoft’un daha önce çalıştığı firmalar ve tamamladığı projeler hakkında bilgiler sunuluyor.
+
+                Ayrıca “Hizmetlerimiz” kısmı da mevcut. Burada, Incisoft’un sunduğu yazılım geliştirme, e-ticaret çözümleri, mobil uygulama ve dijital dönüşüm gibi hizmetler detaylandırılıyor.
               </div>
             </div>
           </div>
@@ -502,10 +567,10 @@
      <!-- Sağ taraf (yazılar) -->
 <div class="col-lg-6">
    <div class="about-content">
-      <h3 class="title" style="font-size: 30px; font-weight: 700; color: #333; line-height: 1.5; text-align: left; margin-bottom: 20px;">
+      <h3 class="title" style="font-size: 30px; font-weight: 700; margin-left: -55px ; color: #333; line-height: 1.5; text-align: left; margin-bottom: 20px;">
          Teknolojik altyapınızı en verimli şekilde şekillendirecek yazılım çözümleriyle her adımda yanınızdayız.
       </h3>
-      <p style="font-size: 18px; color: #666; line-height: 1.8; text-align: left;margin-left: 0px">
+      <p style="font-size: 18px; color: #666; line-height: 1.8; text-align: left;margin-left: -5px">
          Yenilikçi ve geleceği şekillendiren teknoloji çözümleriyle işletmenizi güçlendirin. İhtiyaçlarınıza özel, alanında uzman ve deneyimli uzaktan teknoloji ekiplerimizle, dijital dönüşüm yolculuğunuzu hızlandırıyoruz.
       </p>
    </div>
